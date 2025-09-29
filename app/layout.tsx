@@ -19,8 +19,8 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "Siconect - Proposta Digital Interativa | Neural Ops",
-  description: "Soluções digitais que transformam seu negócio",
+  title: "Ademicon | Proposta – Estrutura de Aquisição de Leads | NeuralOps",
+  description: "Proposta para estrutura completa de aquisição de leads de consórcio internacionais para brasileiros no exterior.",
   generator: "v0.app",
 }
 

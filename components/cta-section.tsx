@@ -1,6 +1,6 @@
 "use client"
 import { Card } from "@/components/ui/card"
-import { Clock } from "lucide-react"
+import { Clock, Phone, Mail, CalendarClock } from "lucide-react"
 import { useState, useEffect } from "react"
 
 export function CTASection() {
@@ -20,7 +20,7 @@ export function CTASection() {
         <!DOCTYPE html>
         <html>
         <head>
-          <title>Proposta Siconect - Neural Ops</title>
+          <title>Proposta Ademicon - NeuralOps</title>
           <meta charset="utf-8">
           <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
           <style>
@@ -380,15 +380,15 @@ export function CTASection() {
         <body>
           <div class="pdf-container">
             <div class="pdf-header">
-              <h1>🚀 Proposta de Transformação Digital</h1>
-              <p class="subtitle"><strong>Para:</strong> Siconect - Soluções Integradas</p>
-              <p class="subtitle"><strong>Apresentado por:</strong> Neural Ops</p>
+              <h1>PROPOSTA – ESTRUTURA DE AQUISIÇÃO DE LEADS</h1>
+              <p class="subtitle"><strong>Cliente:</strong> Ademicon</p>
+              <p class="subtitle"><strong>Proposto por:</strong> Neural.Ops</p>
               <p class="subtitle"><strong>Data:</strong> ${new Date().toLocaleDateString("pt-BR")}</p>
             </div>
             
             <div class="logo-section">
               <div class="logo-container">
-                <div class="logo-placeholder">SICONECT</div>
+                <div class="logo-placeholder">ADEMICON</div>
               </div>
               <div class="logo-container">
                 <div class="logo-placeholder neural">NEURAL OPS</div>
@@ -466,15 +466,15 @@ export function CTASection() {
               </div>
               
               <div class="footer-section">
-                <h3>🚀 Neural Ops - Transformação Digital Inteligente</h3>
+                <h3>NeuralOps</h3>
                 <div class="contact-grid">
                   <div class="contact-item">
                     <h4>📱 WhatsApp</h4>
-                    <p>(11) 99999-9999</p>
+                    <p>+55 62.994780279</p>
                   </div>
                   <div class="contact-item">
                     <h4>📧 Email</h4>
-                    <p>contato@neuralops.com.br</p>
+                    <p>contato@neuralops.app</p>
                   </div>
                   <div class="contact-item">
                     <h4>🕒 Horário</h4>
@@ -524,62 +524,74 @@ export function CTASection() {
 
   return (
     <section className="py-20 relative overflow-hidden">
-      {/* Background gradient */}
+      {/* Enhanced background gradient with animation */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-background to-secondary/20" />
+      
+      {/* Animated mesh gradient overlay */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-primary/30 rounded-full blur-3xl animate-pulse-slow" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-secondary/30 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: "2s" }} />
+      </div>
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-6xl font-bold font-poppins mb-6 text-balance">
+          <h2 className="text-4xl md:text-6xl font-bold font-poppins mb-6 text-balance animate-in fade-in slide-in-from-bottom-4 duration-700">
             Pronto para <span className="text-gradient">Transformar</span> Seu Negócio?
           </h2>
 
-          <p className="text-xl md:text-2xl text-muted-foreground mb-12 text-pretty max-w-2xl mx-auto font-inter">
+          <p className="text-xl md:text-2xl text-muted-foreground mb-12 text-pretty max-w-2xl mx-auto font-inter leading-relaxed animate-in fade-in slide-in-from-bottom-4 duration-700 delay-150">
             Não perca mais tempo. Comece sua transformação digital hoje mesmo.
           </p>
 
-          {/* Urgency Counter */}
-          <Card className="inline-block p-6 mb-12 bg-gradient-to-r from-destructive/10 to-destructive/5 border-destructive/20">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-6 h-6 rounded-full bg-gradient-to-br from-destructive to-destructive/70 p-1">
+          {/* Enhanced Urgency Counter */}
+          <Card className="inline-block p-8 mb-12 bg-gradient-to-r from-destructive/10 to-destructive/5 border-2 border-destructive/30 shadow-2xl hover:shadow-destructive/20 transition-all duration-500 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300 hover:scale-105 group">
+            <div className="flex items-center justify-center gap-3 mb-6">
+              <div className="w-8 h-8 rounded-full bg-gradient-to-br from-destructive to-destructive/70 p-1.5 animate-pulse-slow shadow-lg">
                 <Clock className="w-full h-full text-white" />
               </div>
-              <span className="text-destructive font-semibold font-poppins">Oferta por tempo limitado!</span>
+              <span className="text-destructive font-bold font-poppins text-lg">Oferta por tempo limitado!</span>
             </div>
-            <div className="grid grid-cols-4 gap-4 text-center">
-              <div>
-                <div className="text-2xl font-bold text-destructive font-poppins">{timeLeft.days}</div>
-                <div className="text-sm text-muted-foreground font-inter">Dias</div>
-              </div>
-              <div>
-                <div className="text-2xl font-bold text-destructive font-poppins">{timeLeft.hours}</div>
-                <div className="text-sm text-muted-foreground font-inter">Horas</div>
-              </div>
-              <div>
-                <div className="text-2xl font-bold text-destructive font-poppins">{timeLeft.minutes}</div>
-                <div className="text-sm text-muted-foreground font-inter">Min</div>
-              </div>
-              <div>
-                <div className="text-2xl font-bold text-destructive font-poppins">{timeLeft.seconds}</div>
-                <div className="text-sm text-muted-foreground font-inter">Seg</div>
-              </div>
+            <div className="grid grid-cols-4 gap-6 text-center">
+              {[
+                { value: timeLeft.days, label: "Dias" },
+                { value: timeLeft.hours, label: "Horas" },
+                { value: timeLeft.minutes, label: "Min" },
+                { value: timeLeft.seconds, label: "Seg" }
+              ].map((item, i) => (
+                <div key={i} className="relative">
+                  <div className="bg-card rounded-xl p-4 border-2 border-destructive/20 group-hover:border-destructive/40 transition-all duration-300 hover:scale-110">
+                    <div className="text-3xl font-bold text-destructive font-poppins mb-1">{item.value}</div>
+                    <div className="text-xs text-muted-foreground font-inter uppercase tracking-wide">{item.label}</div>
+                  </div>
+                </div>
+              ))}
             </div>
           </Card>
 
-          {/* Contact Info */}
-          <div className="mt-12 p-8 bg-card rounded-2xl shadow-lg">
-            <h3 className="text-2xl font-bold mb-4 font-poppins">Entre em Contato</h3>
+          {/* Enhanced Contact Info */}
+          <div className="mt-12 p-8 md:p-10 bg-gradient-to-br from-card via-card to-primary/5 rounded-3xl shadow-2xl border-2 border-primary/20 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-500 hover:shadow-primary/20 transition-all duration-500 group">
+            <h3 className="text-3xl font-bold mb-8 font-poppins text-gradient">Entre em Contato</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-              <div>
-                <h4 className="font-semibold mb-2 font-poppins">WhatsApp</h4>
-                <p className="text-primary font-bold font-inter">(62) 99316-7132</p>
+              <div className="p-6 bg-gradient-to-br from-background to-primary/5 rounded-2xl border-2 border-border hover:border-primary/50 transition-all duration-500 hover:scale-110 hover:shadow-xl group/item">
+                <div className="w-14 h-14 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-lg group-hover/item:scale-125 transition-transform duration-300">
+                  <Phone className="w-7 h-7 text-white" />
+                </div>
+                <h4 className="font-bold mb-3 font-poppins text-lg group-hover/item:text-gradient transition-all duration-300">WhatsApp</h4>
+                <p className="font-inter text-primary text-lg">(62) 99316-7132</p>
               </div>
-              <div>
-                <h4 className="font-semibold mb-2 font-poppins">Email</h4>
-                <p className="text-primary font-bold font-inter">contato@neuralops.app</p>
+              <div className="p-6 bg-gradient-to-br from-background to-primary/5 rounded-2xl border-2 border-border hover:border-primary/50 transition-all duration-500 hover:scale-110 hover:shadow-xl group/item">
+                <div className="w-14 h-14 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-secondary to-primary flex items-center justify-center shadow-lg group-hover/item:scale-125 transition-transform duration-300">
+                  <Mail className="w-7 h-7 text-white" />
+                </div>
+                <h4 className="font-bold mb-3 font-poppins text-lg group-hover/item:text-gradient transition-all duration-300">Email</h4>
+                <p className="font-inter text-primary text-lg">contato@neuralops.app</p>
               </div>
-              <div>
-                <h4 className="font-semibold mb-2 font-poppins">Horário</h4>
-                <p className="text-muted-foreground font-inter">Seg-Sex: 9h às 18h</p>
+              <div className="p-6 bg-gradient-to-br from-background to-primary/5 rounded-2xl border-2 border-border hover:border-primary/50 transition-all duration-500 hover:scale-110 hover:shadow-xl group/item">
+                <div className="w-14 h-14 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-accent to-primary flex items-center justify-center shadow-lg group-hover/item:scale-125 transition-transform duration-300">
+                  <CalendarClock className="w-7 h-7 text-white" />
+                </div>
+                <h4 className="font-bold mb-3 font-poppins text-lg group-hover/item:text-gradient transition-all duration-300">Horário</h4>
+                <p className="font-inter text-muted-foreground">Seg-Sex: 9h às 18h</p>
               </div>
             </div>
           </div>
