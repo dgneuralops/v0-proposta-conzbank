@@ -117,8 +117,8 @@ export function ProposalCombo() {
           <Card className="p-6 md:p-8 glass border border-border hover:border-primary/30 transition-colors duration-300">
             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-secondary to-primary" />
             <h3 className="text-3xl font-bold font-poppins mb-4 flex items-center gap-3 text-gradient">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center ">
-                <Sparkles className="w-6 h-6 text-white" />
+              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center p-3">
+                <Sparkles className="w-full h-full text-white" />
               </div>
               PACOTE COMBINADO - CONSÓRCIO + TELEMEDICINA
             </h3>
@@ -202,8 +202,8 @@ export function ProposalCombo() {
           <Card className="p-8 md:p-10 glass border border-primary/40 transition-colors duration-300">
             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-secondary to-primary" />
             <h3 className="text-3xl font-bold font-poppins mb-6 flex items-center gap-3 text-gradient">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-xl animate-pulse-slow">
-                <Gift className="w-6 h-6 text-white" />
+              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center p-3 shadow-xl animate-pulse-slow">
+                <Gift className="w-full h-full text-white" />
               </div>
               BÔNUS EXCLUSIVOS DO PACOTE COMBINADO
             </h3>
