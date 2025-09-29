@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Check, Target, Sparkles, CheckCircle2, Pin, FileText, Gift } from "lucide-react"
 import { useState } from "react"
+import { ImplementationTimeline } from "@/components/implementation-timeline"
 
 interface InteractiveModelCardProps {
   title: string
@@ -315,6 +316,8 @@ export function ProposalCombo() {
 
         </div>
       </div>
+
+      <ImplementationTimeline />
     </section>
   )
 }

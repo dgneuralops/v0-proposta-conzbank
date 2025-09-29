@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Check, Target, ClipboardList, CheckCircle2, Pin, FileText } from "lucide-react"
 import { useState } from "react"
+import { ImplementationTimeline } from "@/components/implementation-timeline"
 
 interface InteractiveModelCardProps {
   title: string
@@ -288,6 +289,8 @@ export function ProposalSection() {
 
         </div>
       </div>
+
+      <ImplementationTimeline />
     </section>
   )
 }
