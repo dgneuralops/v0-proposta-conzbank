@@ -19,8 +19,8 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "Ademicon | Proposta – Estrutura de Aquisição de Leads | NeuralOps",
-  description: "Proposta para estrutura completa de aquisição de leads de consórcio internacionais para brasileiros no exterior.",
+  title: "Konz Bank | Proposta – Desenvolvimento de Marca e Lançamento | NeuralOps",
+  description: "Proposta completa para desenvolvimento de marca e lançamento digital do Konz Bank.",
   generator: "v0.app",
 }
 
