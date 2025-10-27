@@ -24,7 +24,7 @@ export function ProposalSelector({ onSelectProposal }: ProposalSelectorProps) {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
             {/* Consórcio */}
             <Card 
               onClick={() => onSelectProposal('consorcio')}
@@ -80,32 +80,29 @@ export function ProposalSelector({ onSelectProposal }: ProposalSelectorProps) {
             {/* Combo */}
             <Card 
               onClick={() => onSelectProposal('combo')}
-              className="group relative p-8 cursor-pointer transition-all duration-500 hover:scale-105 border-2 border-primary/50 shadow-2xl overflow-visible bg-gradient-to-br from-primary/10 via-background to-primary/5"
+              className="group relative p-6 md:p-6 cursor-pointer transition-all duration-300 hover:border-primary/50 border-2 border-border/50 glass overflow-visible"
             >
               <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-20">
-                <div className="px-4 py-1 bg-gradient-to-r from-primary to-secondary text-white shadow-lg rounded-full text-sm font-bold font-poppins whitespace-nowrap">
-                  Recomendado
+                <div className="px-3 py-1 bg-gradient-to-r from-primary to-secondary text-white shadow-lg rounded-full text-xs font-bold font-poppins whitespace-nowrap">
+                  Pacote Especial
                 </div>
               </div>
               
               <div className="text-center pt-6">
-                <div className="w-20 h-20 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform duration-300">
-                  <Sparkles className="w-10 h-10 text-white" />
+                <div className="w-16 h-16 mx-auto mb-4 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform duration-300">
+                  <Sparkles className="w-8 h-8 text-white" />
                 </div>
                 
-                <h3 className="text-2xl font-bold font-poppins mb-3 text-gradient">
+                <h3 className="text-xl font-bold font-poppins mb-2 group-hover:text-gradient transition-colors duration-300">
                   Pacote Combinado
                 </h3>
                 
-                <p className="text-muted-foreground font-inter leading-relaxed mb-3">
-                  As duas estruturas juntas com desconto especial e bônus exclusivos
+                <p className="text-muted-foreground font-inter text-sm leading-relaxed">
+                  Estratégias de consórcio e telemedicina com desconto
                 </p>
-                
-                <div className="inline-block px-4 py-2 bg-gradient-to-r from-primary to-secondary rounded-full shadow-lg">
-                  <span className="text-sm font-bold font-poppins text-white">10% de desconto</span>
-                </div>
               </div>
             </Card>
+
           </div>
         </div>
       </div>

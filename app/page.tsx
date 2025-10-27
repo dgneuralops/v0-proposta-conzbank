@@ -3,52 +3,47 @@
 import { HeroSection } from "@/components/hero-section"
 import { CTASection } from "@/components/cta-section"
 import { ClientsSection } from "@/components/clients-section"
-import { useState } from "react"
-import { ProposalSection } from "@/components/proposal-section"
-import { ProposalTelemedicina } from "@/components/proposal-telemedicina"
-import { ProposalCombo } from "@/components/proposal-combo"
-import { ProposalSelector } from "@/components/proposal-selector"
-
-type ProposalType = 'consorcio' | 'telemedicina' | 'combo' | null
+import { useEffect, useRef } from "react"
+import { ProposalConzbank } from "@/components/proposal-conzbank"
 
 export default function Home() {
-  const [showSelector, setShowSelector] = useState(false)
-  const [selectedProposal, setSelectedProposal] = useState<ProposalType>(null)
+  const proposalRef = useRef<HTMLDivElement>(null)
 
-  const handleShowProposal = () => {
-    setShowSelector(true)
-  }
-
-  const handleSelectProposal = (type: ProposalType) => {
-    setSelectedProposal(type)
-    // Scroll suave para a proposta
-    setTimeout(() => {
-      const proposalElement = document.getElementById('proposal-content')
-      if (proposalElement) {
-        proposalElement.scrollIntoView({ behavior: 'smooth', block: 'start' })
-      }
-    }, 100)
-  }
+  useEffect(() => {
+    // Rola para a proposta automaticamente ao carregar a página
+    if (proposalRef.current) {
+      setTimeout(() => {
+        proposalRef.current?.scrollIntoView({ behavior: 'smooth' })
+      }, 100)
+    }
+  }, [])
 
   return (
-    <main className="min-h-screen pt-20">
-      <HeroSection onShowProposal={handleShowProposal} />
-
-      {showSelector && (
-        <div className="animate-in slide-in-from-bottom-4 duration-700">
-          <ProposalSelector onSelectProposal={handleSelectProposal} />
+    <main className="min-h-screen">
+      <div className="h-screen flex items-center justify-center bg-gradient-to-b from-background to-muted/10">
+        <div className="text-center p-6 max-w-3xl">
+          <h1 className="text-4xl md:text-6xl font-bold font-poppins mb-6 text-gradient">
+            Proposta KONZ BANK
+          </h1>
+          <p className="text-xl text-muted-foreground mb-8">
+            Branding & Lançamento Digital
+          </p>
+          <div className="mt-12">
+            <a 
+              href="#proposal" 
+              className="px-8 py-4 bg-gradient-to-r from-primary to-secondary text-white font-medium rounded-full hover:opacity-90 transition-opacity"
+            >
+              Ver Proposta Completa
+            </a>
+          </div>
         </div>
-      )}
+      </div>
 
-      {selectedProposal && (
-        <div id="proposal-content" className="animate-in slide-in-from-bottom-4 duration-700">
-          {selectedProposal === 'consorcio' && <ProposalSection />}
-          {selectedProposal === 'telemedicina' && <ProposalTelemedicina />}
-          {selectedProposal === 'combo' && <ProposalCombo />}
-          <ClientsSection />
-          <CTASection />
-        </div>
-      )}
+      <div id="proposal" ref={proposalRef}>
+        <ProposalConzbank />
+        <ClientsSection />
+        <CTASection />
+      </div>
     </main>
   )
 }

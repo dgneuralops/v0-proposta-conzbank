@@ -5,7 +5,7 @@ import { useState, useEffect } from "react"
 
 export function CTASection() {
   const [timeLeft, setTimeLeft] = useState({
-    days: 7,
+    days: 2,
     hours: 23,
     minutes: 45,
     seconds: 30,
